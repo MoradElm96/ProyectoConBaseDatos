@@ -1,0 +1,548 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{104508A2-FAA6-40F4-A363-EFC4B8D6E0BB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Proyecto</RootNamespace>
+    <AssemblyName>Proyecto</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\morad\Desktop\Proyectto2\Proyectto2\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>4</ApplicationRevision>
+    <ApplicationVersion>1.0.1.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\DocumentacionCrudProyecto1.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\Documentacion--Proyecto.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>2467081342350474E1F0A1DF8511D7F35C8481ED</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Proyecto_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=8.0.27.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseDatosProyectoDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BaseDatosProyectoDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Clases\Atleta.cs" />
+    <Compile Include="Clases\ResponsableRRHH.cs" />
+    <Compile Include="Clases\Resultados.cs" />
+    <Compile Include="Controladores\ControladorAtleta.cs" />
+    <Compile Include="Controladores\ControladorResultados.cs" />
+    <Compile Include="Controladores\ControladorRRHH.cs" />
+    <Compile Include="proyectoDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>proyectoDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\FrmAtletas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\FrmAtletas.Designer.cs">
+      <DependentUpon>FrmAtletas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\FrmAyuda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\FrmAyuda.Designer.cs">
+      <DependentUpon>FrmAyuda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\FrmAñadirResultado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\FrmAñadirResultado.Designer.cs">
+      <DependentUpon>FrmAñadirResultado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\FrmGestionDeAtletas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\FrmGestionDeAtletas.Designer.cs">
+      <DependentUpon>FrmGestionDeAtletas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\FrmLocalizacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\FrmLocalizacion.Designer.cs">
+      <DependentUpon>FrmLocalizacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\FrmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\FrmPrincipal.Designer.cs">
+      <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vistas\FrmRegistroResponsable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\FrmRegistroResponsable.Designer.cs">
+      <DependentUpon>FrmRegistroResponsable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\FrmResponsablesRRHH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\FrmResponsablesRRHH.Designer.cs">
+      <DependentUpon>FrmResponsablesRRHH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\FrmSalarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\FrmSalarios.Designer.cs">
+      <DependentUpon>FrmSalarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\FrmVerResultados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\FrmVerResultados.Designer.cs">
+      <DependentUpon>FrmVerResultados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\FrmWebPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\FrmWebPage.Designer.cs">
+      <DependentUpon>FrmWebPage.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Vistas\FrmAtletas.resx">
+      <DependentUpon>FrmAtletas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\FrmAyuda.resx">
+      <DependentUpon>FrmAyuda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\FrmAñadirResultado.resx">
+      <DependentUpon>FrmAñadirResultado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\FrmLocalizacion.resx">
+      <DependentUpon>FrmLocalizacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\FrmRegistroResponsable.resx">
+      <DependentUpon>FrmRegistroResponsable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\FrmResponsablesRRHH.resx">
+      <DependentUpon>FrmResponsablesRRHH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\FrmVerResultados.resx">
+      <DependentUpon>FrmVerResultados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\FrmWebPage.resx">
+      <DependentUpon>FrmWebPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="BaseDatosProyectoDataSet.xsc">
+      <DependentUpon>BaseDatosProyectoDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BaseDatosProyectoDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BaseDatosProyectoDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BaseDatosProyectoDataSet.xss">
+      <DependentUpon>BaseDatosProyectoDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\Proyecto.Clases.ResponsableRRHH.datasource" />
+    <None Include="Properties\DataSources\Proyecto.Clases.Resultados.datasource" />
+    <None Include="Properties\DataSources\Proyecto.Controladores.ControladorAtleta.datasource" />
+    <None Include="Properties\DataSources\Proyecto.Vistas.FrmGestionDeAtletas.datasource" />
+    <None Include="Properties\DataSources\Proyecto.Vistas.FrmTarjetaPreliminar.datasource" />
+    <None Include="Properties\DataSources\Proyecto.Vistas.FrmTarjetaPrincipal.datasource" />
+    <None Include="proyectoDataSet1.xsc">
+      <DependentUpon>proyectoDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="proyectoDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>proyectoDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="proyectoDataSet1.xss">
+      <DependentUpon>proyectoDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Proyecto_TemporaryKey.pfx" />
+    <None Include="Resources\161431968_150915146903109_9165319601587942362_n-650x250.png" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Vistas\FrmGestionDeAtletas.resx">
+      <DependentUpon>FrmGestionDeAtletas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\FrmPrincipal.resx">
+      <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\FrmSalarios.resx">
+      <DependentUpon>FrmSalarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\FrmPrincipal.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.Bson.BsonObjectId.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.Bson.BsonReader.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.Bson.BsonWriter.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.Converters.BinaryConverter.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.Converters.BsonObjectIdConverter.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.Converters.DataSetConverter.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.Converters.DataTableConverter.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.Converters.DateTimeConverterBase.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.Converters.DiscriminatedUnionConverter.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.Converters.EntityKeyMemberConverter.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.Converters.ExpandoObjectConverter.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.Converters.IsoDateTimeConverter.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.Converters.JavaScriptDateTimeConverter.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.Converters.KeyValuePairConverter.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.Converters.RegexConverter.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.Converters.StringEnumConverter.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.Converters.UnixDateTimeConverter.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.Converters.VersionConverter.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.Converters.XmlNodeConverter.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.DefaultJsonNameTable.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.IJsonLineInfo.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.JsonArrayAttribute.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.JsonConstructorAttribute.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.JsonContainerAttribute.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.JsonConvert.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.JsonConverter.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.JsonConverterAttribute.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.JsonConverterCollection.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.JsonDictionaryAttribute.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.JsonException.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.JsonExtensionDataAttribute.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.JsonIgnoreAttribute.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.JsonNameTable.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.JsonObjectAttribute.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.JsonPropertyAttribute.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.JsonReader.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.JsonReaderException.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.JsonRequiredAttribute.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.JsonSerializationException.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.JsonSerializer.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.JsonSerializerSettings.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.JsonTextReader.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.JsonTextWriter.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.JsonValidatingReader.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.JsonWriter.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.JsonWriterException.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.Linq.Extensions.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.Linq.JArray.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.Linq.JConstructor.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.Linq.JContainer.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.Linq.JObject.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.Linq.JProperty.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.Linq.JPropertyDescriptor.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.Linq.JRaw.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.Linq.JsonLoadSettings.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.Linq.JsonMergeSettings.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.Linq.JsonSelectSettings.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.Linq.JToken.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.Linq.JTokenEqualityComparer.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.Linq.JTokenReader.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.Linq.JTokenWriter.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.Linq.JValue.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.Schema.Extensions.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.Schema.JsonSchema.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.Schema.JsonSchemaException.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.Schema.JsonSchemaGenerator.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.Schema.JsonSchemaResolver.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.Schema.ValidationEventArgs.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.Schema.ValidationEventHandler.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.Serialization.CamelCaseNamingStrategy.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.Serialization.CamelCasePropertyNamesContractResolver.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.Serialization.DefaultContractResolver.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.Serialization.DefaultNamingStrategy.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.Serialization.DefaultSerializationBinder.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.Serialization.DiagnosticsTraceWriter.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.Serialization.DynamicValueProvider.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.Serialization.ErrorContext.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.Serialization.ErrorEventArgs.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.Serialization.ExpressionValueProvider.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.Serialization.ExtensionDataGetter.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.Serialization.ExtensionDataSetter.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.Serialization.IAttributeProvider.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.Serialization.IContractResolver.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.Serialization.IReferenceResolver.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.Serialization.ISerializationBinder.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.Serialization.ITraceWriter.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.Serialization.IValueProvider.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.Serialization.JsonArrayContract.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.Serialization.JsonContainerContract.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.Serialization.JsonContract.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.Serialization.JsonDictionaryContract.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.Serialization.JsonDynamicContract.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.Serialization.JsonISerializableContract.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.Serialization.JsonLinqContract.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.Serialization.JsonObjectContract.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.Serialization.JsonPrimitiveContract.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.Serialization.JsonProperty.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.Serialization.JsonPropertyCollection.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.Serialization.JsonStringContract.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.Serialization.KebabCaseNamingStrategy.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.Serialization.MemoryTraceWriter.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.Serialization.NamingStrategy.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.Serialization.OnErrorAttribute.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.Serialization.ReflectionAttributeProvider.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.Serialization.ReflectionValueProvider.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.Serialization.SerializationCallback.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.Serialization.SerializationErrorCallback.datasource" />
+    <None Include="Properties\DataSources\Newtonsoft.Json.Serialization.SnakeCaseNamingStrategy.datasource" />
+    <None Include="Properties\DataSources\Program.datasource" />
+    <None Include="Properties\DataSources\Proyecto.Clases.Atleta.datasource" />
+    <None Include="Properties\DataSources\Proyecto.Controladores.ControladoresAtletas.datasource" />
+    <None Include="Properties\DataSources\Proyecto.Properties.Resources.datasource" />
+    <None Include="Properties\DataSources\Proyecto.Properties.Settings.datasource" />
+    <None Include="Properties\DataSources\Proyecto.Vistas.FrmAtletas.datasource" />
+    <None Include="Properties\DataSources\Proyecto.Vistas.FrmLogin.datasource" />
+    <None Include="Properties\DataSources\Proyecto.Vistas.FrmResultados.datasource" />
+    <None Include="Properties\DataSources\Proyecto.Vistas.FrmSalarios.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Fuentes\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ImagenEvento.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logoUfc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UFC-261-Hero-2_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logoUbicacion.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logoUbic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ubic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ubiccc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ub.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondoOctagono.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cutting-euro-papper-bill.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inauguration %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cut.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2799204-management_99783.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\green-dollar-pack-icon-isometric-of-green-dollar-pack-vector-icon-for-web-design-isolated-on-white-background-400-171423005.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dollarsign_7083.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\result_clipboard_check_mark_list_icon_153875.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\brand_ufc_icon_157766.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\website_web_12218.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ufc_7032.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\olimpycs_4_icon-icons.com_68636.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\File_Explorer_23583.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_book_open_search_locate_6178.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xmag_search_find_export_locate_5984.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find_search_locate_6201.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xmag_search_find_export_locate_5984 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\competencia %281%291.png" />
+    <Content Include="icono.png.ico" />
+    <Content Include="Resources\accept_icon-icons.com_74428.ico" />
+    <EmbeddedResource Include="Resources\banderas\Alex_Oliveira.png" />
+    <EmbeddedResource Include="Resources\banderas\Anthony_Smith.png" />
+    <EmbeddedResource Include="Resources\banderas\Brendan_Allen.png" />
+    <EmbeddedResource Include="Resources\banderas\Chris_Weidman.png" />
+    <EmbeddedResource Include="Resources\banderas\Dwight_Grant.png" />
+    <EmbeddedResource Include="Resources\banderas\Jessica_Andrade.png" />
+    <EmbeddedResource Include="Resources\banderas\Jimmy_Crute.png" />
+    <EmbeddedResource Include="Resources\banderas\Jorge_Masvidal.png" />
+    <EmbeddedResource Include="Resources\banderas\Kamaru_Usman.png" />
+    <EmbeddedResource Include="Resources\banderas\Karl_Roberson.png" />
+    <EmbeddedResource Include="Resources\banderas\Pat_Sabatini.png" />
+    <EmbeddedResource Include="Resources\banderas\Rose_Namajunas.png" />
+    <EmbeddedResource Include="Resources\banderas\Stefan_Sekulic.png" />
+    <EmbeddedResource Include="Resources\banderas\Tristan_Connelly.png" />
+    <EmbeddedResource Include="Resources\banderas\Uriah_Hall.png" />
+    <EmbeddedResource Include="Resources\banderas\Valentina_Schevchenko.png" />
+    <EmbeddedResource Include="Resources\banderas\Weili_Zhang.png" />
+    <Content Include="Resources\delete_unapprove_discard_remove_x_red_icon-icons.com_55984.ico" />
+    <None Include="Resources\gui_action_select_icon_158547 %281%29.png" />
+    <EmbeddedResource Include="Resources\fotosAtletas\Brendan_Allen.png" />
+    <EmbeddedResource Include="Resources\fotosAtletas\Dwight_Grant.png" />
+    <EmbeddedResource Include="Resources\fotosAtletas\Karl_Roberson.png" />
+    <EmbeddedResource Include="Resources\fotosAtletas\Pat_Sabatini.png" />
+    <EmbeddedResource Include="Resources\fotosAtletas\Stefan_Sekulic.png" />
+    <EmbeddedResource Include="Resources\fotosAtletas\Tristan_Connelly.png" />
+    <EmbeddedResource Include="Resources\fotosAtletas\Tristan_Connely.png" />
+    <Content Include="Resources\humans_icon-icons.com_67854.ico" />
+    <Content Include="Resources\new_add_user_16734.ico" />
+    <Content Include="Resources\ordenar %281%29.png" />
+    <Content Include="Resources\ordenar %282%29.png" />
+    <Content Include="Resources\ordenar.png" />
+    <None Include="Resources\sign-emergency-code-sos_14_icon-icons.com_57231.png" />
+    <None Include="Resources\remove_delete_close_1075.ico" />
+    <Content Include="Resources\sort-by-attributes-interface-button-option_icon-icons.com_73405 %281%29.png" />
+    <Content Include="Resources\sort-by-attributes-interface-button-option_icon-icons.com_73405.png" />
+    <EmbeddedResource Include="Resources\fotosAtletas\Alex_Oliveira.png" />
+    <EmbeddedResource Include="Resources\fotosAtletas\Anthony_Smith.png" />
+    <EmbeddedResource Include="Resources\fotosAtletas\Chris_Weidman.png" />
+    <EmbeddedResource Include="Resources\fotosAtletas\Jessica_Andrade.png" />
+    <EmbeddedResource Include="Resources\fotosAtletas\Jimmy_Crute.png" />
+    <EmbeddedResource Include="Resources\fotosAtletas\Jorge_Masvidal.png" />
+    <EmbeddedResource Include="Resources\fotosAtletas\Kamaru_Usman.png" />
+    <EmbeddedResource Include="Resources\fotosAtletas\Randy_Brown.png" />
+    <EmbeddedResource Include="Resources\fotosAtletas\Rose_Namajunas.png" />
+    <EmbeddedResource Include="Resources\fotosAtletas\Uriah_Hall.png" />
+    <EmbeddedResource Include="Resources\fotosAtletas\Valentina_Schevchenko.png" />
+    <EmbeddedResource Include="Resources\fotosAtletas\Weili_Zhang.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
